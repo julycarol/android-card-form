@@ -35,8 +35,9 @@ public class DateValidator {
 
     /**
      * Helper for determining whether a date is a valid credit card expiry date.
+     *
      * @param month Two-digit month
-     * @param year Two or four digit year
+     * @param year  Two or four digit year
      * @return Whether the date is a valid credit card expiry date.
      */
     public static boolean isValid(String month, String year) {
@@ -66,8 +67,6 @@ public class DateValidator {
         int yearLength = yearString.length();
         if (yearLength == 2) {
             year = Integer.parseInt(yearString);
-        } else if (yearLength == 4) {
-            year = Integer.parseInt(yearString.substring(2));
         } else {
             return false;
         }
