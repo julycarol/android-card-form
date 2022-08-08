@@ -88,9 +88,9 @@ afterEvaluate {
     publishing {
         publications {
             release(MavenPublication) {
-                groupId = 'com.github.julycarol'
+                groupId = 'com.braintreepayments'
                 artifactId = 'android-card-form'
-                version = '5.4.3'
+                version = '5.4.4'
             }
         }
     }
