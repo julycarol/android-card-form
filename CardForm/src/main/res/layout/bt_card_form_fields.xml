@@ -56,13 +56,7 @@
     </LinearLayout>
 
     <LinearLayout
-        style="@style/bt_field_container"
-        android:baselineAligned="false"
-        tools:ignore="RtlCompat"
-        android:weightSum="2"
-        android:paddingLeft="@dimen/bt_no_edit_text_icon_padding"
-        android:paddingStart="@dimen/bt_no_edit_text_icon_padding"
-        android:paddingEnd="0dp">
+        style="@style/bt_field_container">
 
         <com.google.android.material.textfield.TextInputLayout
             style="@style/bt_text_input_layout"
@@ -76,6 +70,11 @@
                 android:hint="@string/bt_form_hint_expiration"/>
 
         </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/bt_field_container">
 
         <com.google.android.material.textfield.TextInputLayout
             style="@style/bt_text_input_layout"

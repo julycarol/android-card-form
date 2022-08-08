@@ -20,7 +20,7 @@ import com.braintreepayments.cardform.utils.DateValidator;
  */
 public class ExpirationDateEditText extends ErrorEditText implements TextWatcher, View.OnClickListener {
 
-    private static final int MAX_NUM_CHARS = 6;
+    private static final int MAX_NUM_CHARS = 4;
 
     private boolean mChangeWasAddition;
     private OnClickListener mClickListener;
