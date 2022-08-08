@@ -11,7 +11,7 @@ buildscript {
     }
 }
 
-version '5.4.5'
+version '5.4.6'
 
 ext {
     compileSdkVersion = 30
