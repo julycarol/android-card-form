@@ -7,14 +7,11 @@ buildscript {
         }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.0.1'
-        classpath 'de.marcphilipp.gradle:nexus-publish-plugin:0.4.0'
-        classpath 'io.codearte.gradle.nexus:gradle-nexus-staging-plugin:0.21.2'
+        classpath 'com.android.tools.build:gradle:4.2.1'
     }
 }
 
 plugins {
-    id 'io.codearte.nexus-staging' version '0.21.2'
     id 'maven-publish'
 }
 
@@ -25,7 +22,7 @@ ext["signing.secretKeyRingFile"] = System.getenv('SIGNING_KEY_FILE') ?: ''
 version '5.4.4'
 ext {
     compileSdkVersion = 30
-    minSdkVersion = 21
+    minSdkVersion = 23
     targetSdkVersion = 30
     versionCode = 52
     versionName = version
@@ -36,14 +33,6 @@ allprojects {
         google()
         jcenter()
     }
-}
-
-nexusStaging {
-    packageGroup = "com.braintreepayments"
-    // give nexus sonatype more time to close the staging repository
-    delayBetweenRetriesInMillis = 20000
-    username = System.env['SONATYPE_USERNAME']
-    password = System.env['SONATYPE_PASSWORD']
 }
 
 task changeReleaseVersion {

@@ -10,7 +10,6 @@ public class SampleApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        LeakCanary.install(this);
         Stetho.initializeWithDefaults(this);
     }
 }
