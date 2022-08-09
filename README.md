@@ -11,7 +11,7 @@ Add the dependency in your `build.gradle`:
 
 ```groovy
 dependencies {
-    implementation 'com.braintreepayments:card-form:5.4.0'
+    implementation 'com.braintreepayments:card-form:5.4.7'
 }
 ```
 
@@ -53,6 +53,7 @@ cardForm.getCardholderName();
 cardForm.getPostalCode();
 cardForm.getCountryCode();
 cardForm.getMobileNumber();
+cardForm.addSecureFlag(this);
 ```
 
 To check if `CardForm` is valid call `CardForm#isValid()`. To validate each required field
