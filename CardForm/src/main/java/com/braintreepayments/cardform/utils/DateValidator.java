@@ -19,7 +19,7 @@ public class DateValidator {
      * but since the difference is less than {@code MAXIMUM_VALID_YEAR_DIFFERENCE}, it should still
      * be trusted to be valid client-side.
      */
-    public static final int MAXIMUM_VALID_YEAR_DIFFERENCE = 20;
+    public static final int MAXIMUM_VALID_YEAR_DIFFERENCE = 40;
 
     private static final DateValidator INSTANCE = new DateValidator(Calendar.getInstance());
 
