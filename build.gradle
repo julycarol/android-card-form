@@ -11,13 +11,13 @@ buildscript {
     }
 }
 
-version '5.4.8'
+version '5.4.9'
 
 ext {
     compileSdkVersion = 30
     minSdkVersion = 23
     targetSdkVersion = 30
-    versionCode = 52
+    versionCode = 53
     versionName = version
 }
 
