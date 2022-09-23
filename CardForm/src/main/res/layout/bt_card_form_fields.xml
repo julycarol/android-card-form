@@ -57,13 +57,20 @@
     </LinearLayout>
 
     <LinearLayout style="@style/bt_field_container">
-
+        <ImageView
+            android:id="@+id/bt_card_form_expiration_date_icon"
+            style="@style/bt_card_form_icon"
+            tools:ignore="ContentDescription" />
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/txt_input_layout_expiration_date"
             style="@style/bt_text_input_layout"
             android:layout_width="match_parent"
             android:layout_weight="1"
-            android:labelFor="@+id/bt_card_form_expiration">
+            android:labelFor="@+id/bt_card_form_expiration"
+            android:paddingStart="@dimen/bt_edit_text_icon_padding"
+            android:paddingLeft="@dimen/bt_edit_text_icon_padding"
+            android:paddingEnd="0dp"
+            tools:ignore="RtlCompat">
 
             <com.braintreepayments.cardform.view.ExpirationDateEditText
                 android:id="@+id/bt_card_form_expiration"

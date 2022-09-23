@@ -82,6 +82,7 @@ public class CardForm extends LinearLayout implements OnCardTypeChangedListener,
     private MobileNumberEditText mMobileNumber;
     private TextView mMobileNumberExplanation;
     private InitialValueCheckBox mSaveCardCheckBox;
+    private ImageView mExpirationDateIcon;
 
     private boolean mCardNumberRequired;
     private boolean mExpirationRequired;
@@ -142,6 +143,7 @@ public class CardForm extends LinearLayout implements OnCardTypeChangedListener,
         mMobileNumber = findViewById(R.id.bt_card_form_mobile_number);
         mMobileNumberExplanation = findViewById(R.id.bt_card_form_mobile_number_explanation);
         mSaveCardCheckBox = findViewById(R.id.bt_card_form_save_card_checkbox);
+        mExpirationDateIcon = findViewById(R.id.bt_card_form_expiration_date_icon);
 
         mVisibleEditTexts = new ArrayList<>();
 
@@ -299,6 +301,7 @@ public class CardForm extends LinearLayout implements OnCardTypeChangedListener,
         mCardNumberIcon.setImageResource(isDarkBackground ? R.drawable.bt_ic_card_dark : R.drawable.bt_ic_card);
         mPostalCodeIcon.setImageResource(isDarkBackground ? R.drawable.bt_ic_postal_code_dark : R.drawable.bt_ic_postal_code);
         mMobileNumberIcon.setImageResource(isDarkBackground ? R.drawable.bt_ic_mobile_number_dark : R.drawable.bt_ic_mobile_number);
+        mExpirationDateIcon.setImageResource(isDarkBackground ? R.drawable.bt_ic_date : R.drawable.bt_ic_date);
 
         setViewVisibility(mCardholderNameIcon, cardHolderNameVisible);
         setFieldVisibility(mCardholderName, cardHolderNameVisible);
@@ -312,6 +315,7 @@ public class CardForm extends LinearLayout implements OnCardTypeChangedListener,
         setFieldVisibility(mCountryCode, mMobileNumberRequired);
         setFieldVisibility(mMobileNumber, mMobileNumberRequired);
         setViewVisibility(mMobileNumberExplanation, mMobileNumberRequired);
+        setViewVisibility(mSaveCardCheckBox, mSaveCardCheckBoxVisible);
         setViewVisibility(mSaveCardCheckBox, mSaveCardCheckBoxVisible);
 
         TextInputEditText editText;
